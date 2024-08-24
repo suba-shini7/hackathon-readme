@@ -91,7 +91,7 @@ Open your web browser and navigate to http://localhost:3000. You should see the 
 
 ## Project Structure
 
-opcua-to-mqtt/
+```opcua-to-mqtt/
 │
 ├── index.js # Main script for connecting to OPC UA and pushing data to MQTT
 ├── server.js # Server script for handling EJS templates and displaying data
@@ -104,7 +104,7 @@ opcua-to-mqtt/
 ├── package.json # Project metadata and dependencies
 ├── package-lock.json # Lockfile for npm dependencies
 └── README.md # Installation guide and project documentation
-
+```
 ## Explanation of Key Files
 
 index.js: Contains the logic for connecting to the OPC UA server and publishing data to the MQTT broker.
