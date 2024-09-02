@@ -1,0 +1,68 @@
+<!-- views/history.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature History</title>
+    <style>
+        /* Simple styles for the navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+           background-color: #4f4f4f;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+        }
+        button{
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #4f4f4f;        
+        }
+        button a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Current Temperature</a>
+        <a href="/history">Temperature History</a>
+    </nav>
+<fieldset>
+    <legend> <h1>Temperature History</h1></legend>
+    <ul id="temperature-list">
+        <!-- Temperature readings will be inserted here -->
+    </ul>
+</fieldset>
+    <!-- Include socket.io client library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/history.js"></script>
+</body>
+</html>

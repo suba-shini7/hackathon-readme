@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Temperature</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav a {
+        color: white;
+        margin: 0 20px;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      nav a:hover {
+        background-color: #555;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      #temperature {
+        font-size: 48px;
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .middle-container{
+        background: rgba(72, 72, 72, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        width: 40%;
+      }
+      /* Responsive design */
+      @media (max-width: 600px) {
+        nav a {
+          font-size: 16px;
+          margin: 0 10px;
+        }
+        #temperature {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Current Temperature</a>
+      <a href="/history">Temperature History</a>
+    </nav>
+    <div class="container">
+      <div class="middle-container">
+        <h1>Current Temperature</h1>
+        <p id="temperature">Loading...</p>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
